@@ -20,7 +20,7 @@ Since the Studio root needs to be used as a client component there is a separate
 
 Components used in studio live in `src/app/_studio`. General components used for layouts and the like are in `src/app/_components`.
 
-Each studio components is contained in a directory. The component itself lives in the file `[ComponentName]Component.tsx`. The component's studio definition lives in the same folder under the `index.tsx` file.
+Each studio components is contained in a directory. The component itself lives in the file `[ComponentName]Component.tsx`. The component's studio definition lives in the same folder under the `index.ts` file.
 
 ### Registering Studio Components
 
