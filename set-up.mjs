@@ -15,6 +15,7 @@ const ORG_ID = '1jtZ8D4corGeQgsNmtaFM4'; // Studio Staging Org
     {
       name: 'cmaToken',
       message: 'What is your Contentful CMA token?',
+      type: 'password',
     },
     {
       name: 'spaceName',
