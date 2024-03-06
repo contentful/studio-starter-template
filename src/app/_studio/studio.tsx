@@ -1,7 +1,10 @@
 'use client';
 
 import { MODE } from '@/lib/constants';
-import { ExperienceRoot, useFetchBySlug } from '@contentful/experience-builder';
+import {
+  ExperienceRoot,
+  useFetchBySlug,
+} from '@contentful/experiences-sdk-react';
 import '@lib/register-components';
 import { ContentfulClientApi, createClient } from 'contentful';
 import { notFound } from 'next/navigation';

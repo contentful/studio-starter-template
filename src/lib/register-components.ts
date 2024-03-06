@@ -1,7 +1,7 @@
 import {
   defineComponents,
   defineDesignTokens,
-} from '@contentful/experience-builder';
+} from '@contentful/experiences-sdk-react';
 import StudioConfig from '../../studio.config';
 import { SiteButtonDefinition, SiteButtonComponent } from '@studio/SiteButton';
 import {

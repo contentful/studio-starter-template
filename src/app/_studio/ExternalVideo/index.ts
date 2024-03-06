@@ -1,4 +1,4 @@
-import { ComponentDefinition } from '@contentful/experience-builder';
+import { ComponentDefinition } from '@contentful/experiences-sdk-react';
 export * from './ExternalVideoComponent';
 
 export const ExternalVideoDefinition: ComponentDefinition = {

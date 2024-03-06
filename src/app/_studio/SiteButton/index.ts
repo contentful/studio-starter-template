@@ -2,7 +2,7 @@ import {
   CONTENTFUL_COMPONENTS,
   CONTENTFUL_COMPONENT_CATEGORY,
   ComponentDefinition,
-} from '@contentful/experience-builder';
+} from '@contentful/experiences-sdk-react';
 import StudioConfig from '../../../../studio.config';
 
 export * from './SiteButtonComponent';
