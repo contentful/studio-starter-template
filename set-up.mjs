@@ -11,7 +11,7 @@ const ORG_ID = '1jtZ8D4corGeQgsNmtaFM4'; // Studio Staging Org
 // const ORG_ID = '5ZLP1tojPlbZtiMhmNFKzG'; // Colorful Composition Org
 
 (async () => {
-  const { cmaToken, spaceName } = await inquirer.prompt([
+  const { cmaToken, spaceName, orgId } = await inquirer.prompt([
     {
       name: 'cmaToken',
       message: 'What is your Contentful CMA token?',
@@ -20,6 +20,11 @@ const ORG_ID = '1jtZ8D4corGeQgsNmtaFM4'; // Studio Staging Org
     {
       name: 'spaceName',
       message: 'What would you like to call your space?',
+    },
+    {
+      name: 'orgId',
+      default: ORG_ID,
+      message: 'What is your Organization ID?',
     },
   ]);
 
@@ -43,7 +48,7 @@ const ORG_ID = '1jtZ8D4corGeQgsNmtaFM4'; // Studio Staging Org
       {
         name: spaceName,
       },
-      ORG_ID
+      orgId
     );
   } catch (e) {
     console.log(chalk.red('Your cma token may be invalid.'));
