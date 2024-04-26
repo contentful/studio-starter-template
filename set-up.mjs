@@ -54,7 +54,27 @@ const ORG_ID = '1jtZ8D4corGeQgsNmtaFM4'; // Studio Staging Org
     console.log(chalk.red('Your cma token may be invalid.'));
     return;
   }
-
+  try {
+    client.rawRequest({
+      method: 'PUT',
+      url: `https://api.contentful.com/spaces/${space.sys.id}/enablements`,
+      data: {
+        crossSpaceLinks: { enabled: false },
+        spaceTemplates: { enabled: false },
+        studioExperiences: { enabled: true },
+      },
+      headers: {
+        'X-Contentful-Enable-Alpha-Feature': 'enablements',
+        'X-Contentful-Version': 1,
+      },
+    });
+  } catch (e) {
+    return {
+      state: 'error',
+      error: 'Failed to enable experiences',
+      stacktrace: e,
+    };
+  }
   console.log(chalk.green('------------------------------'));
   console.log(chalk.green('|                            |'));
   console.log(chalk.green('|   Creating Access Tokens   |'));
