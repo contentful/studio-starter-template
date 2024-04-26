@@ -55,7 +55,7 @@ const ORG_ID = '1jtZ8D4corGeQgsNmtaFM4'; // Studio Staging Org
     return;
   }
   try {
-    client.rawRequest({
+    await client.rawRequest({
       method: 'PUT',
       url: `https://api.contentful.com/spaces/${space.sys.id}/enablements`,
       data: {
