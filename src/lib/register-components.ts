@@ -1,13 +1,13 @@
 import {
   defineComponents,
   defineDesignTokens,
-} from '@contentful/experiences-sdk-react';
-import StudioConfig from '../../studio.config';
-import { SiteButtonDefinition, SiteButtonComponent } from '@studio/SiteButton';
+} from "@contentful/experiences-sdk-react";
+import StudioConfig from "../../studio.config";
+import { SiteButtonDefinition, SiteButtonComponent } from "@studio/SiteButton";
 import {
   ExternalVideoComponent,
   ExternalVideoDefinition,
-} from '@studio/ExternalVideo';
+} from "@studio/ExternalVideo";
 
 defineComponents([
   {
@@ -21,6 +21,9 @@ defineComponents([
     component: ExternalVideoComponent,
     definition: ExternalVideoDefinition,
   },
+  /*
+   * After a new folder is created in '/_components' you need to register it below in a JSON format
+   */
 ]);
 
 /*
@@ -28,6 +31,6 @@ defineComponents([
  */
 defineDesignTokens({
   color: {
-    Primary: StudioConfig.colors.primary['400'],
+    Primary: StudioConfig.colors.primary["400"],
   },
 });
