@@ -28,22 +28,22 @@ defineComponents([
 ]);
 defineBreakpoints([
   {
-    id: 'desktop',
-    query: '*',
-    displayName: 'All Sizes',
-    previewSize: '100%',
+    id: "desktop",
+    query: "*",
+    displayName: "All Sizes",
+    previewSize: "100%",
   },
   {
-    id: 'tablet',
-    query: '<992px',
-    displayName: 'Tablet',
-    previewSize: '820px',
+    id: "tablet",
+    query: "<992px",
+    displayName: "Tablet",
+    previewSize: "820px",
   },
   {
-    id: 'mobile',
-    query: '<576px',
-    displayName: 'Mobile',
-    previewSize: '390px',
+    id: "mobile",
+    query: "<576px",
+    displayName: "Mobile",
+    previewSize: "390px",
   },
 ]);
 /*
@@ -52,5 +52,10 @@ defineBreakpoints([
 defineDesignTokens({
   color: {
     Primary: StudioConfig.colors.primary["400"],
+    Secondary: StudioConfig.colors.secondary["400"],
+    Tertiary: StudioConfig.colors.tertiary["400"],
+    Warning: StudioConfig.colors.warning["400"],
+    Info: StudioConfig.colors.info["400"],
+    Success: StudioConfig.colors.success["400"],
   },
 });

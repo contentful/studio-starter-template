@@ -39,3 +39,4 @@ next-env.d.ts
 contentful-import-error-log-*-*-*-*-*-*.json
 package-lock.json
 .gitignore
+studio starter.zip
