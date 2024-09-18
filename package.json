@@ -20,7 +20,7 @@
     "contentful-import": "^9.4.42",
     "contentful-management": "^11.19.1",
     "inquirer": "^9.2.15",
-    "next": "14.1.1",
+    "next": "14.2.12",
     "next-intl": "^3.9.1",
     "print-message": "^3.0.1",
     "prompts": "^2.4.2",
