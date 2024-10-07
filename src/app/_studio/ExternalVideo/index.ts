@@ -4,7 +4,7 @@ export * from './ExternalVideoComponent';
 export const ExternalVideoDefinition: ComponentDefinition = {
   id: 'external-video',
   name: 'External Video',
-  category: 'Assets',
+  category: 'Custom Components',
   thumbnailUrl:
     'https://images.ctfassets.net/baw0wklqktjb/2ot7Yd2e2ZdCXsJEpgbhYs/ffb6ac3d46d31d1abf82bc100e9a0604/youtube-logo.png?h=250',
   builtInStyles: ['cfMargin', 'cfPadding', 'cfHeight'],

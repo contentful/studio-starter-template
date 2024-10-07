@@ -1,15 +1,14 @@
 import {
   CONTENTFUL_COMPONENTS,
-  CONTENTFUL_COMPONENT_CATEGORY,
   ComponentDefinition,
 } from "@contentful/experiences-sdk-react";
 import StudioConfig from "../../../../studio.config";
 
-export * from "./SiteButtonComponent";
+export * from "./ContactFormComponent";
 
-export const SiteButtonDefinition: ComponentDefinition = {
-  id: CONTENTFUL_COMPONENTS.button.id,
-  name: CONTENTFUL_COMPONENTS.button.name,
+export const ContactFormDefinition: ComponentDefinition = {
+  id: "contact-form",
+  name: "Contact Form",
   category: "Custom Components",
   builtInStyles: [
     "cfMargin",
@@ -65,12 +64,12 @@ export const SiteButtonDefinition: ComponentDefinition = {
       defaultValue: "8px 8px",
       group: "style",
     },
-    borderRadius: {
-      type: "Number",
-      displayName: "Border radius",
-      defaultValue: 5,
-      group: "style",
-    },
+    // borderRadius: {
+    //   type: "Number",
+    //   displayName: "Border radius",
+    //   defaultValue: 5,
+    //   group: "style",
+    // },
     label: {
       type: "Text",
       displayName: "Label",
@@ -81,35 +80,35 @@ export const SiteButtonDefinition: ComponentDefinition = {
       displayName: "URL",
       defaultValue: "https://www.contentful.com/",
     },
-    icon: {
-      type: "Text",
-      displayName: "Icon",
-      validations: {
-        in: [
-          {
-            value: "",
-            displayName: "None",
-          },
-          {
-            value: "arrowRight",
-            displayName: "Arrow Right",
-          },
-          {
-            value: "arrowLeft",
-            displayName: "Arrow Left",
-          },
-          {
-            value: "chevronRight",
-            displayName: "Chevron Right",
-          },
-          {
-            value: "chevronLeft",
-            displayName: "Chevron Left",
-          },
-        ],
-      },
-      defaultValue: undefined,
-    },
+    // icon: {
+    //   type: "Text",
+    //   displayName: "Icon",
+    //   validations: {
+    //     in: [
+    //       {
+    //         value: undefined,
+    //         displayName: "None",
+    //       },
+    //       {
+    //         value: "arrowRight",
+    //         displayName: "Arrow Right",
+    //       },
+    //       {
+    //         value: "arrowLeft",
+    //         displayName: "Arrow Left",
+    //       },
+    //       {
+    //         value: "chevronRight",
+    //         displayName: "Chevron Right",
+    //       },
+    //       {
+    //         value: "chevronLeft",
+    //         displayName: "Chevron Left",
+    //       },
+    //     ],
+    //   },
+    //   defaultValue: undefined,
+    // },
     target: {
       type: "Text",
       validations: {
