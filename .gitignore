@@ -27,7 +27,6 @@ yarn-error.log*
 
 # local env files
 .env*.local
-set-up.mjs
 
 # vercel
 .vercel
@@ -37,6 +36,3 @@ set-up.mjs
 next-env.d.ts
 
 contentful-import-error-log-*-*-*-*-*-*.json
-package-lock.json
-.gitignore
-studio starter.zip
