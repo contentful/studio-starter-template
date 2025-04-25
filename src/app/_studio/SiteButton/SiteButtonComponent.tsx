@@ -1,19 +1,20 @@
+import React from 'react';
 import {
   ArrowLeftCircleIcon,
   ArrowRightCircleIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
 } from '@heroicons/react/24/outline';
-import { FC } from 'react';
+import type { FC } from "react";
 
 import styles from './SiteButton.module.css';
 
-type SiteButtonProps = {
-  label: string;
-  url: string;
-  target: '_self' | '_blank';
-  borderRadius: string;
+export interface SiteButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  label?: string;
+  url?: string;
+  target?: '_self' | '_blank';
   icon: 'arrowRight' | 'arrowLeft' | 'chevronRight' | 'chevronLeft';
+  onNavigate?: (url: string, target?: string) => void;
 };
 
 const ICONS: Record<string, FC<any>> = {
@@ -23,27 +24,42 @@ const ICONS: Record<string, FC<any>> = {
   chevronLeft: ChevronLeftIcon,
 };
 
-export function SiteButtonComponent({
-  label,
-  url,
-  target,
-  borderRadius,
+export const SiteButtonComponent: React.FC<SiteButtonProps> = ({
+  className,
   icon,
+  label,
+  onClick,
+  onNavigate,
+  target,
+  url,
   ...props
-}: SiteButtonProps) {
+}) => {
   const Icon = icon ? ICONS[icon] : null;
+
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (onNavigate && url) {
+      event.preventDefault();
+      onNavigate(url, target);
+    }
+    onClick && onClick(event);
+  };
 
   return (
     <a
       href={url}
+      data-url={url}
+      data-target={target}
+      onClick={handleClick}
       target={target}
-      className={styles.siteButton}
-      style={{ overflow: 'hidden', borderRadius: `${borderRadius}px` }}
+      rel={target === "_blank" ? "noopener noreferrer" : undefined}
+      aria-label={label}
+      className={`${className} ${styles.siteButton}`}
+      {...props}
     >
-      <button className="flex flex-col-reverse" {...props}>
-        {label}
-        {Icon && <Icon width={20} />}
-      </button>
+      <span className={styles.contentWrapper}>
+        <span className={styles.label}>{label}</span>
+        {Icon && <span className={styles.icon}><Icon width={20} /></span>}
+      </span>
     </a>
   );
 }
