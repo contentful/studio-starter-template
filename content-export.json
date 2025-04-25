@@ -1238,7 +1238,7 @@
                             },
                             "children": [
                               {
-                                "definitionId": "contentful-button",
+                                "definitionId": "custom-button",
                                 "variables": {
                                   "cfPadding": {
                                     "type": "DesignValue",
@@ -1351,7 +1351,7 @@
                                 ]
                               },
                               {
-                                "definitionId": "contentful-button",
+                                "definitionId": "custom-button",
                                 "variables": {
                                   "cfPadding": {
                                     "type": "DesignValue",
