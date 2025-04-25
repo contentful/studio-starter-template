@@ -1,6 +1,5 @@
 import {
   CONTENTFUL_COMPONENTS,
-  CONTENTFUL_COMPONENT_CATEGORY,
   ComponentDefinition,
 } from "@contentful/experiences-sdk-react";
 import StudioConfig from "../../../../studio.config";
