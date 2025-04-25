@@ -927,7 +927,7 @@
                         },
                         "children": [
                           {
-                            "definitionId": "heading",
+                            "definitionId": "contentful-heading",
                             "variables": {
                               "cfHeight": {
                                 "type": "DesignValue",
@@ -1054,7 +1054,7 @@
                             ]
                           },
                           {
-                            "definitionId": "richText",
+                            "definitionId": "contentful-richText",
                             "variables": {
                               "cfLineHeight": {
                                 "type": "DesignValue",
@@ -1238,7 +1238,7 @@
                             },
                             "children": [
                               {
-                                "definitionId": "button",
+                                "definitionId": "contentful-button",
                                 "variables": {
                                   "cfPadding": {
                                     "type": "DesignValue",
@@ -1351,7 +1351,7 @@
                                 ]
                               },
                               {
-                                "definitionId": "button",
+                                "definitionId": "contentful-button",
                                 "variables": {
                                   "cfPadding": {
                                     "type": "DesignValue",
@@ -1550,7 +1550,7 @@
                         },
                         "children": [
                           {
-                            "definitionId": "image",
+                            "definitionId": "contentful-image",
                             "variables": {
                               "alt": {
                                 "type": "UnboundValue",
@@ -1796,7 +1796,7 @@
                     },
                     "children": [
                       {
-                        "definitionId": "heading",
+                        "definitionId": "contentful-heading",
                         "variables": {
                           "cfHeight": {
                             "type": "DesignValue",
@@ -2075,7 +2075,7 @@
                             },
                             "children": [
                               {
-                                "definitionId": "richText",
+                                "definitionId": "contentful-richText",
                                 "variables": {
                                   "cfLineHeight": {
                                     "type": "DesignValue",
