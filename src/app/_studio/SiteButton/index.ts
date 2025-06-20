@@ -1,6 +1,5 @@
 import {
   CONTENTFUL_COMPONENTS,
-  CONTENTFUL_COMPONENT_CATEGORY,
   ComponentDefinition,
 } from "@contentful/experiences-sdk-react";
 import StudioConfig from "../../../../studio.config";
@@ -8,18 +7,24 @@ import StudioConfig from "../../../../studio.config";
 export * from "./SiteButtonComponent";
 
 export const SiteButtonDefinition: ComponentDefinition = {
-  id: CONTENTFUL_COMPONENTS.button.id,
-  name: CONTENTFUL_COMPONENTS.button.name,
+  id: "custom-button",
+  name: "Custom Button",
   category: "Custom Components",
   builtInStyles: [
-    "cfMargin",
-    "cfBorderRadius",
     "cfBorder",
-    "cfLineHeight",
+    "cfBorderRadius",
+    "cfFontSize",
+    "cfFontWeight",
     "cfLetterSpacing",
+    "cfLineHeight",
+    "cfMargin",
+    "cfMaxWidth",
     "cfTextAlign",
     "cfTextBold",
-    "cfHorizontalAlignment",
+    "cfTextColor",
+    "cfTextItalic",
+    "cfTextTransform",
+    "cfTextUnderline",
   ],
   variables: {
     cfPadding: {
@@ -28,58 +33,25 @@ export const SiteButtonDefinition: ComponentDefinition = {
       defaultValue: "10px 8px 10px 8px",
       group: "style",
     },
-    cfFontSize: {
-      type: "Text",
-      displayName: "Font size",
-      defaultValue: "18px",
-
-      group: "style",
-    },
-    cfTextColor: {
-      type: "Text",
-      displayName: "Text color",
-      defaultValue: "#fff",
-      group: "style",
-    },
     cfWidth: {
-      type: "Text",
       displayName: "Width",
-      defaultValue: "all",
+      type: "Text",
       group: "style",
+      description: "The width of the button.",
+      defaultValue: "fit-content",
+    },
+    cfHeight: {
+      displayName: "Height",
+      type: "Text",
+      group: "style",
+      description: "The height of the button.",
+      defaultValue: "fit-content",
     },
     cfBackgroundColor: {
       type: "Text",
       displayName: "Background color",
       defaultValue: StudioConfig.colors.primary["400"],
       group: "style",
-    },
-    cfFlexDirection: {
-      type: "Text",
-      displayName: "Flex direction",
-      defaultValue: "row",
-      group: "style",
-    },
-    cfGap: {
-      type: "Text",
-      displayName: "Gap",
-      defaultValue: "8px 8px",
-      group: "style",
-    },
-    borderRadius: {
-      type: "Number",
-      displayName: "Border radius",
-      defaultValue: 5,
-      group: "style",
-    },
-    label: {
-      type: "Text",
-      displayName: "Label",
-      defaultValue: "Click me",
-    },
-    url: {
-      type: "Text",
-      displayName: "URL",
-      defaultValue: "https://www.contentful.com/",
     },
     icon: {
       type: "Text",
@@ -108,10 +80,12 @@ export const SiteButtonDefinition: ComponentDefinition = {
           },
         ],
       },
-      defaultValue: undefined,
+      defaultValue: "",
+      group: "style",
     },
     target: {
       type: "Text",
+      displayName: "Target",
       validations: {
         in: [
           {
@@ -125,6 +99,17 @@ export const SiteButtonDefinition: ComponentDefinition = {
         ],
       },
       defaultValue: "_self",
+      group: "style",
+    },
+    label: {
+      type: "Text",
+      displayName: "Label",
+      defaultValue: "Click me",
+    },
+    url: {
+      type: "Text",
+      displayName: "URL",
+      defaultValue: "https://www.contentful.com/",
     },
   },
 };
