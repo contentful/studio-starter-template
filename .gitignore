@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+yarn.lock
 
 # testing
 /coverage
@@ -25,8 +26,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
+# Ignore all .env files
+.env
+
+# Ignore all .env.* (like .env.local, .env.production)
+.env.*
+
+# Other specific files
 set-up.mjs
 
 # vercel
