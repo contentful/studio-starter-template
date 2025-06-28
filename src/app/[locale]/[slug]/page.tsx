@@ -6,10 +6,20 @@ export default async function Home({
   searchParams,
 }: {
   params: { locale: string; slug: string };
-  searchParams: { mode: MODE };
+  searchParams: { mode: MODE; spaceId?: string; environmentId?: string; deliveryToken?: string; previewToken?: string };
 }) {
-  const { mode } = searchParams;
+  const { mode, spaceId, environmentId, deliveryToken, previewToken } = searchParams;
   const { locale, slug } = params;
 
-  return <Studio slug={slug} locale={locale} mode={mode} />;
+  return (
+    <Studio
+      slug={slug}
+      locale={locale}
+      mode={mode}
+      spaceId={spaceId}
+      environmentId={environmentId}
+      deliveryToken={deliveryToken}
+      previewToken={previewToken}
+    />
+  );
 }

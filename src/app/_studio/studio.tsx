@@ -14,23 +14,30 @@ type StudioProps = {
   slug: string;
   locale?: string;
   mode: MODE;
+  // Optional Contentful credentials from query params
+  spaceId?: string;
+  environmentId?: string;
+  deliveryToken?: string;
+  previewToken?: string;
 };
 
 const Studio = (props: StudioProps) => {
-  const { slug, locale = 'en-US', mode } = props;
+  const { slug, locale = 'en-US', mode, spaceId, environmentId, deliveryToken, previewToken } = props;
 
+  // Use query param values if provided, else fallback to env vars
   const config = {
-    space: process.env.NEXT_PUBLIC_SPACE_ID!,
-    accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN!,
-    host: "cdn.contentful.com"  
+    space: spaceId || process.env.NEXT_PUBLIC_SPACE_ID!,
+    environment: environmentId || process.env.NEXT_PUBLIC_ENVIRONMENT_ID || 'master',
+    accessToken: deliveryToken || process.env.NEXT_PUBLIC_ACCESS_TOKEN!,
+    host: 'cdn.contentful.com',
   };
-  
-  if (mode === "preview") {
-    config.accessToken = process.env.NEXT_PUBLIC_PREVIEW_TOKEN!
-    config.host = "preview.contentful.com"
+
+  if (mode === 'preview') {
+    config.accessToken = previewToken || process.env.NEXT_PUBLIC_PREVIEW_TOKEN!;
+    config.host = 'preview.contentful.com';
   }
 
-  const client = createClient(config)
+  const client = createClient(config);
 
   const { experience, isLoading, error } = useFetchBySlug({
     client,
