@@ -9,6 +9,10 @@ import {
   ExternalVideoComponent,
   ExternalVideoDefinition,
 } from "@studio/ExternalVideo";
+import {
+  ContactFormComponent,
+  ContactFormDefinition,
+} from "@/app/_studio/ContactForm";
 
 defineComponents([
   {
@@ -21,6 +25,10 @@ defineComponents([
   {
     component: ExternalVideoComponent,
     definition: ExternalVideoDefinition,
+  },
+  {
+    component: ContactFormComponent,
+    definition: ContactFormDefinition,
   },
   /*
    * After a new folder is created in '/_components' you need to register it below in a JSON format
