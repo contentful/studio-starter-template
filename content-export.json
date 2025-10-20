@@ -1550,25 +1550,18 @@
                         },
                         "children": [
                           {
+                            "id": "UnSlzLF1",
                             "definitionId": "contentful-image",
+                            "parameters": {},
                             "variables": {
                               "alt": {
                                 "type": "UnboundValue",
                                 "key": "MgtnaKw6KWsGyAlnIdzEc"
                               },
-                              "src": {
-                                "path": "/rZwSf8RXAOX0_Zq0mlz1I/fields/file/~locale",
-                                "type": "BoundValue"
-                              },
-                              "width": {
+                              "cfVisibility": {
                                 "type": "DesignValue",
                                 "valuesByBreakpoint": {
-                                }
-                              },
-                              "classes": {
-                                "type": "DesignValue",
-                                "valuesByBreakpoint": {
-                                  "desktop": "cf-image"
+                                  "desktop": true
                                 }
                               },
                               "cfMargin": {
@@ -1580,12 +1573,38 @@
                               "cfPadding": {
                                 "type": "DesignValue",
                                 "valuesByBreakpoint": {
-                                  "desktop": "0 25px 0 25px"
+                                  "desktop": "0 0px 0 0px"
+                                }
+                              },
+                              "classes": {
+                                "type": "DesignValue",
+                                "valuesByBreakpoint": {
+                                  "desktop": "cf-image"
+                                }
+                              },
+                              "cfImageAsset": {
+                                "path": "/rZwSf8RXAOX0_Zq0mlz1I/fields/file/~locale",
+                                "type": "BoundValue"
+                              },
+                              "cfImageOptions": {
+                                "type": "DesignValue",
+                                "valuesByBreakpoint": {
+                                  "desktop": {
+                                    "width": "100%",
+                                    "height": "100%",
+                                    "targetSize": "500px",
+                                    "objectFit": "none"
+                                  }
+                                }
+                              },
+                              "cfBorderRadius": {
+                                "type": "DesignValue",
+                                "valuesByBreakpoint": {
+                                  "desktop": "0px"
                                 }
                               }
                             },
-                            "children": [
-                            ]
+                            "children": []
                           }
                         ]
                       }

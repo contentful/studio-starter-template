@@ -127,24 +127,43 @@ NEXT_PUBLIC_STUDIO_TYPE_ID=landingPage`
   console.log('\n');
 
   await client.rawRequest({
-    method: 'POST',
+    method: "POST",
     url: `https://api.contentful.com/spaces/${space.sys.id}/preview_environments`,
     data: {
       configurations: [
         {
-          contentType: 'landingPage',
+          contentType: "landingPage",
+          enabled: true,
+          example: false,
+          url: `https://studio-starter-template.colorfuldemo.com/{locale}/{entry.fields.slug}?mode=preview&spaceId=${space.sys.id}&previewToken=${previewToken}&deliveryToken=${deliveryToken}`,
+        },
+      ],
+      name: "Web Preview",
+      description: "Preview content as a standard web page on a Contentful hosted frontend",
+    },
+  });
+
+  await client.rawRequest({
+    method: "POST",
+    url: `https://api.contentful.com/spaces/${space.sys.id}/preview_environments`,
+    data: {
+      configurations: [
+        {
+          contentType: "landingPage",
           enabled: true,
           example: false,
           url: `http://localhost:3000/{locale}/{entry.fields.slug}?mode=preview`,
         },
       ],
-      name: 'Localhost Preview',
-      description: 'Preview content as a standard web page',
+      name: "Localhost Preview",
+      description:
+        "Preview content as a standard web page in your local dev environment",
     },
   });
 
   console.table({
-    Frontend: `http://localhost:3000/en-US`,
-    'Contentful App': `https://app.contentful.com/spaces/${space.sys.id}`,
+    "Localhost Frontend": `http://localhost:3000/en-US`,
+    "Web Preview": `https://studio-starter-template.colorfuldemo.com/en-US?mode=preview&spaceId=${space.sys.id}&previewToken=${previewToken}&deliveryToken=${deliveryToken}`,
+    "Contentful Web App": `https://app.contentful.com/spaces/${space.sys.id}`,
   });
 })();
