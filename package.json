@@ -21,7 +21,7 @@
     "contentful-management": "^11.19.1",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.9.0",
-    "inquirer": "^9.2.15",
+    "inquirer": "^9.3.8",
     "next": "14.2.33",
     "next-intl": "^3.9.1",
     "print-message": "^3.0.1",
